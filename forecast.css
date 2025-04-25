@@ -1,0 +1,210 @@
+/* Forecast Page Styles */
+.forecast-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forecast-header {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    color: white;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.forecast-header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    background: none;
+    -webkit-text-fill-color: unset;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.location-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    color: #cceeff;
+    margin-bottom: 2rem;
+}
+
+.location-display i {
+    color: #00eaff;
+}
+
+.forecast-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1.5rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+}
+
+.forecast-card {
+    background: #1e2a3a;
+    border-radius: 20px;
+    padding: 1.8rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    width: 250px;
+    color: white;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.forecast-card:hover {
+    transform: translateY(-7px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.forecast-card.active {
+    border: 2px solid #00eaff;
+    background: rgba(0, 255, 255, 0.05);
+}
+
+.forecast-date {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.day-name {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.date {
+    display: block;
+    font-size: 0.9rem;
+    color: #b0c4de;
+}
+
+.forecast-icon {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #00eaff;
+    margin: 1rem 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.forecast-icon i {
+    font-size: 3.5rem;
+    color: #00eaff;
+    text-shadow: 0 5px 15px rgba(0, 234, 255, 0.5);
+}
+
+.forecast-temp {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.temp-high {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ff6b6b;
+}
+
+.temp-low {
+    font-size: 1.3rem;
+    color: #1dd1a1;
+}
+
+.forecast-details {
+    display: grid;
+    gap: 0.6rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffffff;
+}
+
+.detail i {
+    color: #00eaff;
+    width: 20px;
+}
+
+.forecast-chart-container {
+    background: #1e2a3a;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+    margin-top: 3rem;
+    width: 70%;
+}
+
+.forecast-chart-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.forecast-chart-container h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #00eaff, #6c5ce7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.chart-placeholder {
+    width: 100%;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* Loading and Error States */
+.loading, .error-message {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    background: rgba(30, 42, 58, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+    color: white;
+}
+
+.error-message {
+    color: #ff6b6b;
+}

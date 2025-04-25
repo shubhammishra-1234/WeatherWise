@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Weather - WeatherWise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-cloud-sun"></i>
+                <span>WeatherWise</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="weather.html" class="active">Weather</a></li>
+                <li><a href="forecast.html">Forecast</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button class="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="weather-page">
+        <div class="weather-container">
+            <div class="weather-side">
+                <div class="date-container">
+                    <h2 class="date-dayname">Day</h2>
+                    <span class="date-day">month and date</span>
+                    <div class="location-container">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span class="location">City</span>
+                    </div>
+                </div>
+
+                <div class="weather-info">
+                    <i class="fa-solid fa-sun icon"></i>
+                    <h1 class="weather-temp">00°C</h1>
+                    <h3 class="weather-desc">Sunny</h3>
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <i class="fa-solid fa-temperature-high"></i>
+                            <span>Feels like: <strong>00°C</strong></span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fa-solid fa-eye"></i>
+                            <span>Visibility: <strong>10 km</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-side">
+                <div class="search-container">
+                    <input type="search" placeholder="Search for a city..." class="search-box">
+                    <button><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+                </div>
+
+                <div class="today-info-container">
+                    <h3 class="section-title">Today's Details</h3>
+                    <div class="today-info">
+                        <div class="percipitation flex">
+                            <span class="title">PRECIPITATION</span>
+                            <span class="value">0%</span>
+                        </div>
+
+                        <div class="humidity flex">
+                            <span class="title">HUMIDITY</span>
+                            <span class="value">00%</span>
+                        </div>
+
+                        <div class="wind flex">
+                            <span class="title">WIND</span>
+                            <span class="value">0 km/h</span>
+                        </div>
+                        
+                        <div class="uv-index flex">
+                            <span class="title">UV INDEX</span>
+                            <span class="value">Low</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="forecast-link-container">
+                    <a href="forecast.html" class="forecast-link">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>View 7-Day Forecast</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="additional-info">
+            <div class="info-card weather-map-card">
+                <a href="https://www.ventusky.com/jamshedpur" target="_blank" class="map-link">
+                    <div class="map-content">
+                        <h3><i class="fa-solid fa-map-location-dot"></i> Interactive Weather Map</h3>
+                        <p>View detailed weather maps for Jamshedpur</p>
+                        <div class="map-preview">
+                            <img src="images.jpg" alt="Jamshedpur Weather Map" class="map-image">
+                            <div class="map-overlay">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="info-card">
+                <h3>Weather Alerts</h3>
+                <div class="alerts-container">
+                    <p class="no-alerts">No active weather alerts</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>WeatherWise</h3>
+                <p>Your trusted weather companion</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                    <li><a href="forecast.html">Forecast</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Updates & Recommendations</h3>
+                <ul>
+                    <li><a href="#">Weather Alerts</a></li>
+                    <li><a href="#">Seasonal Forecasts</a></li>
+                    <li><a href="#">Travel Weather</a></li>
+                    <li><a href="#">Weather Tips</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 WeatherWise. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="alert.js"></script>
+</body>
+
+</html> 

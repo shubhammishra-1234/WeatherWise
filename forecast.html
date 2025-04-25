@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-Day Forecast - WeatherWise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="forecast.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-cloud-sun"></i>
+                <span>WeatherWise</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="forecast.html" class="active">Forecast</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button class="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="forecast-page">
+        <div class="forecast-header">
+            <h1>7-Day Weather Forecast</h1>
+            <div class="location-display">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="location">New York, US</span>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <input type="search" placeholder="Search for a city..." class="search-box">
+            <button><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+        </div>
+
+        <div class="forecast-container">
+            <div class="forecast-cards">
+                <div class="forecast-card active">
+                    <div class="forecast-date">
+                        <span class="day-name">Today</span>
+                        <span class="date">Mar 19</span>
+                    </div>
+                    <div class="forecast-icon">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <div class="forecast-temp">
+                        <span class="temp-high">29°C</span>
+                        <span class="temp-low">18°C</span>
+                    </div>
+                    <div class="forecast-details">
+                        <div class="detail">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>Humidity: 65%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-wind"></i>
+                            <span>Wind: 12 km/h</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <span>Precip: 0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast-card">
+                    <div class="forecast-date">
+                        <span class="day-name">Tomorrow</span>
+                        <span class="date">Mar 20</span>
+                    </div>
+                    <div class="forecast-icon">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                    </div>
+                    <div class="forecast-temp">
+                        <span class="temp-high">25°C</span>
+                        <span class="temp-low">17°C</span>
+                    </div>
+                    <div class="forecast-details">
+                        <div class="detail">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>Humidity: 70%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-wind"></i>
+                            <span>Wind: 15 km/h</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <span>Precip: 20%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast-card">
+                    <div class="forecast-date">
+                        <span class="day-name">Thursday</span>
+                        <span class="date">Mar 21</span>
+                    </div>
+                    <div class="forecast-icon">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <div class="forecast-temp">
+                        <span class="temp-high">27°C</span>
+                        <span class="temp-low">16°C</span>
+                    </div>
+                    <div class="forecast-details">
+                        <div class="detail">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>Humidity: 75%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-wind"></i>
+                            <span>Wind: 18 km/h</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <span>Precip: 40%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast-card">
+                    <div class="forecast-date">
+                        <span class="day-name">Friday</span>
+                        <span class="date">Mar 22</span>
+                    </div>
+                    <div class="forecast-icon">
+                        <i class="fa-solid fa-cloud-showers-heavy"></i>
+                    </div>
+                    <div class="forecast-temp">
+                        <span class="temp-high">31°C</span>
+                        <span class="temp-low">19°C</span>
+                    </div>
+                    <div class="forecast-details">
+                        <div class="detail">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>Humidity: 80%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-wind"></i>
+                            <span>Wind: 20 km/h</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <span>Precip: 60%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast-card">
+                    <div class="forecast-date">
+                        <span class="day-name">Saturday</span>
+                        <span class="date">Mar 23</span>
+                    </div>
+                    <div class="forecast-icon">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                    </div>
+                    <div class="forecast-temp">
+                        <span class="temp-high">28°C</span>
+                        <span class="temp-low">17°C</span>
+                    </div>
+                    <div class="forecast-details">
+                        <div class="detail">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>Humidity: 70%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-wind"></i>
+                            <span>Wind: 14 km/h</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <span>Precip: 10%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast-card">
+                    <div class="forecast-date">
+                        <span class="day-name">Sunday</span>
+                        <span class="date">Mar 24</span>
+                    </div>
+                    <div class="forecast-icon">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <div class="forecast-temp">
+                        <span class="temp-high">26°C</span>
+                        <span class="temp-low">16°C</span>
+                    </div>
+                    <div class="forecast-details">
+                        <div class="detail">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>Humidity: 65%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-wind"></i>
+                            <span>Wind: 10 km/h</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <span>Precip: 0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="forecast-card">
+                    <div class="forecast-date">
+                        <span class="day-name">Monday</span>
+                        <span class="date">Mar 25</span>
+                    </div>
+                    <div class="forecast-icon">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <div class="forecast-temp">
+                        <span class="temp-high">24°C</span>
+                        <span class="temp-low">15°C</span>
+                    </div>
+                    <div class="forecast-details">
+                        <div class="detail">
+                            <i class="fa-solid fa-droplet"></i>
+                            <span>Humidity: 75%</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-wind"></i>
+                            <span>Wind: 16 km/h</span>
+                        </div>
+                        <div class="detail">
+                            <i class="fa-solid fa-cloud-rain"></i>
+                            <span>Precip: 30%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>WeatherWise</h3>
+                <p>Your trusted weather companion</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                    <li><a href="forecast.html">Forecast</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Updates & Recommendations</h3>
+                <ul>
+                    <li><a href="#">Weather Alerts</a></li>
+                    <li><a href="#">Seasonal Forecasts</a></li>
+                    <li><a href="#">Travel Weather</a></li>
+                    <li><a href="#">Weather Tips</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 WeatherWise. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="forecast.js"></script>
+</body>
+
+</html> 
